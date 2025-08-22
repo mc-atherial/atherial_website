@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atherial Minecraft Server</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo-container">
+                <div class="logo"><img src="logo.png" /></div>
+                <div class="logo-text">Atherial</div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggle" id="theme-toggle">🌙</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Welcome to Atherial Minecraft Server</h1>
+            <p>Experience the ultimate Minecraft adventure with custom mods, mini-games, and a friendly community. Join thousands of players in our amazing world!</p>
+            <a href="#" class="cta-button" id="join-button">Join Now</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Server Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎮</div>
+                    <h3>Vanilla Experience</h3>
+                    <p>Enjoy a pure Minecraft experience with minimal modifications. Our server maintains the core gameplay while adding subtle enhancements that respect the original game design.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎁</div>
+                    <h3>Loot Cases</h3>
+                    <p>Exciting loot cases await you. Craft keys, open cases and unlock rare items, and showcase your gameplay.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>Active Community</h3>
+                    <p>Join our vibrant and welcoming community of Minecraft enthusiasts. Make new friends, participate in events, and collaborate on amazing building projects together.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Our Server</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Atherial Minecraft Server was established in 2024 with a simple goal: to create a welcoming space where players can enjoy Minecraft in its purest form while still having access to exciting features like loot cases and community events.</p>
+                    <p>Our dedicated team works tirelessly to maintain a lag-free experience with 99.9% uptime. We regularly update the server with new content while preserving the vanilla experience that makes Minecraft special.</p>
+                    <p>Whether you're a seasoned veteran or new to Minecraft, you'll find a home on our server. Our community is known for being helpful and inclusive, with players from all around the world.</p>
+                </div>
+                <div class="about-image">
+                    <img src="preview.png" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Atherial</h3>
+                    <p>Atherial is a premium Minecraft server offering a vanilla experience with enhanced features like loot cases and a vibrant, active community.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">📱</a>
+                        <a href="mailto:contact@atherial.fun" class="social-icon">📧</a>
+                        <a href="https://discord.gg/ZSUMBZQBrf" class="social-icon">🔷</a>
+                        <a href="index.html" class="social-icon">⚔️</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Email: contact@atherial.fun</p>
+                    <p>Discord: discord.gg/ZSUMBZQBrf</p>
+                    <p>Website: www.atherial.fun</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Atherial Minecraft Server. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Server Info Modal -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal">
+            <button class="close-modal" id="close-modal">✕</button>
+            <h2>Join Our Server</h2>
+            <div class="server-info">
+                <p>For console players: <a href="https://www.youtube.com/watch?v=2D1gsv0hOYg" target="_blank" style="color: var(--primary-purple);">click here</a></p>
+                <div class="info-item" data-copy="play.atherial.fun">
+                    <span>Server IP:</span>
+                    <span>play.atherial.fun</span>
+                </div>
+                <div class="info-item" data-copy="35017">
+                    <span>Port:</span>
+                    <span>35017</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copy Notification -->
+    <div class="copy-notification" id="copy-notification">Copied to clipboard!</div>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            themeToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+        });
+
+        // Modal functionality
+        const joinButton = document.getElementById('join-button');
+        const modalOverlay = document.getElementById('modal-overlay');
+        const closeModal = document.getElementById('close-modal');
+
+        joinButton.addEventListener('click', () => {
+            modalOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        const closeModalFunc = () => {
+            modalOverlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        };
+
+        closeModal.addEventListener('click', closeModalFunc);
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) closeModalFunc();
+        });
+
+        // Copy to clipboard functionality
+        const infoItems = document.querySelectorAll('.info-item');
+        const copyNotification = document.getElementById('copy-notification');
+
+        infoItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const textToCopy = item.getAttribute('data-copy');
+                navigator.clipboard.writeText(textToCopy).then(() => {
+                    copyNotification.classList.add('active');
+                    setTimeout(() => {
+                        copyNotification.classList.remove('active');
+                    }, 2000);
+                });
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-card, .about-text, .about-image').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
